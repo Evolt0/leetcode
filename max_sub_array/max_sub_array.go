@@ -21,8 +21,8 @@ func maxSubArray(nums []int) int {
 }
 
 func main() {
-	test := []int{-2, 1}
-	println(maxSubArrayV2(test))
+	test := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
+	println(maxSubArrayDP(test))
 }
 
 func maxSubArrayV2(nums []int) int {
@@ -44,4 +44,21 @@ func Max(a, b int) int {
 		return a
 	}
 	return b
+}
+
+func maxSubArrayDP(nums []int) int {
+	if len(nums) == 0 {
+		return 0
+	}
+	if len(nums) == 1 {
+		return nums[0]
+	}
+	pre1 := nums[0]
+	ans, pre2 := pre1, pre1
+	for i := 1; i < len(nums); i++ {
+		pre1 = Max(pre2+nums[i], nums[i])
+		pre2 = pre1
+		ans = Max(pre1, ans)
+	}
+	return ans
 }
