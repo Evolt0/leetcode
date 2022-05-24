@@ -1,4 +1,4 @@
-package main
+package length_of_longest_substring
 
 import (
 	"fmt"

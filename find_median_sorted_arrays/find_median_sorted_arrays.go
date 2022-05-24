@@ -1,4 +1,4 @@
-package main
+package find_median_sorted_arrays
 
 import (
 	"testing"

@@ -1,7 +1,5 @@
 package main
 
-import "log"
-
 func convert(s string, numRows int) string {
 	n, r := len(s), numRows
 	if r == 1 || r >= n {
@@ -33,8 +31,4 @@ func convert(s string, numRows int) string {
 
 	}
 	return string(ans)
-}
-
-func main() {
-	log.Println(convert("PAYPALISHIRING", 3))
 }

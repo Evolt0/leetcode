@@ -1,7 +1,6 @@
 package main
 
 import (
-	"log"
 	"math"
 )
 
@@ -15,8 +14,4 @@ func reverse(x int) (rev int) {
 		}
 	}
 	return
-}
-
-func main() {
-	log.Println(1 << 31)
 }
