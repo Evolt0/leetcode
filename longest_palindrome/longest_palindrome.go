@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package longest_palindrome
 
 func longestPalindrome(s string) string {
 	dp := make([][]bool, len(s))
@@ -15,10 +13,6 @@ func longestPalindrome(s string) string {
 		}
 	}
 	return ans
-}
-
-func main() {
-	fmt.Println(longestPalindrome2("adacad"))
 }
 
 func longestPalindrome2(s string) string {

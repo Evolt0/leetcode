@@ -14,6 +14,6 @@ func twoSum(nums []int, target int) []int {
 }
 
 func TestTwoSum(t *testing.T) {
-	i := []int{1,2,3,4}
-	twoSum(i,5)
+	i := []int{1, 2, 3, 4}
+	twoSum(i, 5)
 }
