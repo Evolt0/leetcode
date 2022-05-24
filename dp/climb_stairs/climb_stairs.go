@@ -1,4 +1,4 @@
-package main
+package climb_stairs
 
 func climbStairs(n int) int {
 	if n <= 2 {
@@ -11,10 +11,6 @@ func climbStairs(n int) int {
 		dp[j] = dp[j-1] + dp[j-2]
 	}
 	return dp[n]
-}
-
-func main() {
-	println(climbStairsV2(5))
 }
 
 func climbStairsV2(n int) int {

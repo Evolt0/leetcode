@@ -1,6 +1,4 @@
-package main
-
-import "testing"
+package two_sum
 
 func twoSum(nums []int, target int) []int {
 	for i := 0; i < len(nums); i++ {
@@ -11,9 +9,4 @@ func twoSum(nums []int, target int) []int {
 		}
 	}
 	return nil
-}
-
-func TestTwoSum(t *testing.T) {
-	i := []int{1, 2, 3, 4}
-	twoSum(i, 5)
 }

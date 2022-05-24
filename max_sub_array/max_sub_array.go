@@ -20,11 +20,6 @@ func maxSubArray(nums []int) int {
 	return max
 }
 
-func main() {
-	test := []int{-2, 1, -3, 4, -1, 2, 1, -5, 4}
-	println(maxSubArrayDP(test))
-}
-
 func maxSubArrayV2(nums []int) int {
 	max := nums[0]
 	sum := 0

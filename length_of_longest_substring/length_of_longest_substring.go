@@ -1,34 +1,24 @@
 package length_of_longest_substring
 
-import (
-	"fmt"
-	"sort"
-	"testing"
-)
+func Max(x, y int) int {
+	if x < y {
+		return y
+	}
+	return x
+}
 
 func lengthOfLongestSubstring(s string) int {
-	if len(s) == 0 {
-		return 0
+	var last [128]int
+	for i := 0; i < len(last); i++ {
+		last[i] = -1
 	}
-	var ans []int
-	tag := 0
+	var left int = -1
+	var ans int = 0
 	for i := 0; i < len(s); i++ {
-		for j := i + 1; j < len(s); j++ {
-			if s[i] == s[j] {
-				tag = tag - i
-				break
-			} else {
-				tag = j
-			}
-		}
-		if tag != 0 {
-			ans = append(ans, tag)
-		}
+		var si = int(s[i])
+		left = Max(left, last[si])
+		last[si] = i
+		ans = Max(ans, i-left)
 	}
-	fmt.Println(ans)
-	sort.Sort(sort.Reverse(sort.IntSlice(ans)))
-	return ans[0]
-}
-func TestLengthOfLongestSubString(t *testing.T) {
-	t.Log(lengthOfLongestSubstring(" "))
+	return ans
 }

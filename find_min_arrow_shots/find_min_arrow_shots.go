@@ -1,13 +1,8 @@
-package main
+package find_min_arrow_shots
 
 import (
 	"sort"
 )
-
-func main() {
-	i := [][]int{{8, 7}, {1, 4}}
-	println(findMinArrowShots(i))
-}
 
 func findMinArrowShots(points [][]int) int {
 	if len(points) == 0 {

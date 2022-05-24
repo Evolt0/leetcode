@@ -1,10 +1,6 @@
-package main
+package erase_overlap_intervals
 
 import "sort"
-
-func main() {
-
-}
 
 func eraseOverlapIntervals(intervals [][]int) int {
 	if len(intervals) < 1 {

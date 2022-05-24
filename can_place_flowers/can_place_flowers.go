@@ -1,11 +1,6 @@
-package main
+package can_place_flowers
 
 import "fmt"
-
-func main() {
-	s := []int{0,0,1}
-	println(canPlaceFlowersV2(s, 1))
-}
 
 func canPlaceFlowers(flowerbed []int, n int) bool {
 	length := len(flowerbed)
@@ -43,7 +38,7 @@ func canPlaceFlowers(flowerbed []int, n int) bool {
 func canPlaceFlowersV2(flowerbed []int, n int) bool {
 	length := len(flowerbed)
 	count := 0
-	fmt.Println(length )
+	fmt.Println(length)
 	for i := 0; i < length; {
 		if flowerbed[i] == 1 {
 			i += 2
@@ -54,6 +49,6 @@ func canPlaceFlowersV2(flowerbed []int, n int) bool {
 			i += 3
 		}
 	}
-	fmt.Println(count )
+	fmt.Println(count)
 	return count >= n
 }

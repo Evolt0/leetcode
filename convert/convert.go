@@ -1,4 +1,4 @@
-package main
+package convert
 
 func convert(s string, numRows int) string {
 	n, r := len(s), numRows

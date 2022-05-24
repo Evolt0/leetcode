@@ -1,4 +1,4 @@
-package main
+package dichotomize
 
 func dichotomize(src []int, target int) int {
 	l, r := 0, len(src)

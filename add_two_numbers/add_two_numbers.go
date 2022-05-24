@@ -1,4 +1,4 @@
-package main
+package add_two_numbers
 
 type ListNode struct {
 	Val  int
