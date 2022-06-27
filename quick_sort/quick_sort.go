@@ -1,7 +1,7 @@
 package quick_sort
 
 func QuickSort(arr []int) []int {
-	return quickSort(arr, 0, len(arr))
+	return quickSort(arr, 0, len(arr)-1)
 }
 
 func quickSort(arr []int, left, right int) []int {
@@ -15,7 +15,7 @@ func quickSort(arr []int, left, right int) []int {
 
 func partition(arr []int, left, right int) int {
 	pivot, index := left, left+1
-	for i := index; i < right; i++ {
+	for i := index; i <= right; i++ {
 		if arr[i] < arr[pivot] {
 			swap(arr, i, index)
 			index++

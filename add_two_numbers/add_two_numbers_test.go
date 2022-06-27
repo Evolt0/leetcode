@@ -17,7 +17,7 @@ func Test_addTwoNumbers(t *testing.T) {
 	}{
 		// TODO: Add test cases.
 		{
-			name: "addTwoNumbers",
+			name: t.Name(),
 			args: args{
 				l1: &ListNode{
 					Val: 2,
